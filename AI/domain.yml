@@ -1,0 +1,86 @@
+version: "3.1"
+
+entities:
+- ingredient
+- name
+- time
+- up
+- down
+
+intents:
+  - command_timer:
+      ignore_entities:
+        - name
+  - command_first_page:
+      ignore_entities:
+        - name
+  - command_last_page:
+      ignore_entities:
+        - name
+  - command_previous_page:
+      ignore_entities:
+        - name
+  - command_next_page:
+      ignore_entities:
+        - name
+  - command_current_page:
+      ignore_entities:
+        - name
+  - no_command
+  - ask_ingredient:
+      ignore_entities:
+        - name
+      use_entities:
+        - ingredient
+  - command_increase_volume:
+      ignore_entities:
+        - name
+  - command_decrease_volume:
+      ignore_entities:
+        - name
+
+responses:
+  utter_command_increase_volume:
+  - text: "volume_increase"
+
+  utter_command_decrease_volume:
+  - text: "volume_decrease"
+
+  utter_command_timer:
+  - text: "timer"
+
+  utter_command_first_page:
+  - text: "first_page"
+
+  utter_command_last_page:
+  - text: "last_page"
+
+  utter_command_previous_page:
+  - text: "previous_page"
+
+  utter_command_next_page:
+  - text: "next_page"
+
+  utter_command_current_page:
+  - text: "current_page"
+
+  utter_sorry:
+  - text: "죄송해요. 대답할 수 없는 질문입니다."
+
+  utter_no_command:
+  - text: "죄송해요. 대답할 수 없는 질문입니다."
+
+  utter_ask_ingredient:
+  - text: "재료:{ingredient}"
+
+actions:
+  - action_ask_ingredient
+
+templates:
+
+  utter_ask_ingredient:
+  - text: "재료:{ingredient}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

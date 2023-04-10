@@ -1,0 +1,33 @@
+{
+  "lang":"ko",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_version":">=3.5.0,<3.6.0",
+  "spacy_git_version":"dec81508d",
+  "vectors":{
+    "width":200,
+    "vectors":30186,
+    "keys":30186,
+    "name":"ko_pipeline.vectors"
+  },
+  "labels":{
+
+  },
+  "pipeline":[
+
+  ],
+  "components":[
+
+  ],
+  "disabled":[
+
+  ],
+  "requirements":[
+
+  ]
+}

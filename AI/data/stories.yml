@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+- story: command path 1
+  steps:
+  - intent: command_first_page
+  - action: utter_command_first_page
+
+- story: command path 2
+  steps:
+  - intent: command_last_page
+  - action: utter_command_last_page
+
+- story: command path 3
+  steps:
+  - intent: command_previous_page
+  - action: utter_command_previous_page
+
+- story: command path 4
+  steps:
+  - intent: command_next_page
+  - action: utter_command_next_page
+
+- story: command path 5
+  steps:
+  - intent: command_current_page
+  - action: utter_command_current_page
+
+- story: command timer
+  steps:
+  - intent: command_timer
+  - action: utter_command_timer
+
+- story: no command path
+  steps:
+  - intent: no_command
+  - action: utter_no_command
+
+- story: ask_ingredient
+  steps:
+  - intent: ask_ingredient
+    entities:
+    - ingredient: "소금"
+  - action: action_ask_ingredient
+
+- story: command volue 1
+  steps:
+  - intent: command_increase_volume
+  - action: utter_command_increase_volume
+
+- story: command volume 2
+  steps:
+  - intent: command_decrease_volume
+  - action: utter_command_decrease_volume
